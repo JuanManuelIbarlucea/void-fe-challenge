@@ -7,8 +7,6 @@ export default async function getData(endpoint: string) {
     cache: "no-cache",
   });
 
-  console.log({ res });
-
   if (!res.ok) {
     throw new Error("Failed to fetch data, endpoint: " + endpoint);
   }
