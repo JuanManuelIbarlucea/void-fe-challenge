@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 51, 0, 102;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+table{
+  @apply w-full;
+}
+th{
+  @apply sticky top-0 bg-gray-700 p-5;
+}
+td{
+  @apply p-5;
+}
+tr{
+  @apply text-center odd:bg-gray-800 even:bg-gray-900;
+}
+select{
+  @apply bg-transparent border border-gray-500 p-1 rounded-lg;
+}
+option{
+  @apply bg-gray-900;
+
+}
