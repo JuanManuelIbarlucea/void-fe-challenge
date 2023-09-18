@@ -1,6 +1,6 @@
 "use client";
 
-import { LeaderboardData, LeaderboardPlayer } from "@/lib/types";
+import { LeaderboardData, LeaderboardPlayer } from "@/types/leaderboard";
 import { RegionType, regions, useRegion } from "@/context/regionContext";
 import { useEffect, useState } from "react";
 
