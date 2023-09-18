@@ -18,22 +18,25 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-table{
+svg {
+  @apply min-w-[2rem] min-h-[2rem];
+}
+
+table {
   @apply w-full;
 }
-th{
+th {
   @apply sticky top-0 bg-gray-700 p-5;
 }
-td{
+td {
   @apply p-5;
 }
-tr{
+tr {
   @apply text-center odd:bg-gray-800 even:bg-gray-900;
 }
-select{
+select {
   @apply bg-transparent border border-gray-500 p-1 rounded-lg;
 }
-option{
+option {
   @apply bg-gray-900;
-
 }

@@ -5,6 +5,7 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import { RegionProvider } from "@/context/regionContext";
+import Nav from "@/components/nav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,8 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="min-h-screen max-w-5xl m-auto mt-5">
-          <RegionProvider>{children}</RegionProvider>
+        <div className="min-h-screen flex">
+          <Nav />
+          <div className="min-h-screen max-w-5xl mx-auto my-10">
+            <RegionProvider>{children}</RegionProvider>
+          </div>
         </div>
       </body>
     </html>

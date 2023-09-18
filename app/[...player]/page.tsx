@@ -54,7 +54,7 @@ export default async function PlayerPage({
 
   const losses = matchHistory.length - wins;
   return (
-    <div className="flex flex-col gap-5 max-w-2xl m-auto">
+    <div className="flex flex-col gap-5 min-w-[50rem] m-auto">
       <h1 className="mb-6 text-3xl text-center">Match History</h1>
       <div className="h-[5rem] flex items-center gap-5">
         <Image
