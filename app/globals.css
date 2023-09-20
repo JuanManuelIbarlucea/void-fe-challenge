@@ -18,6 +18,10 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.title {
+  @apply mb-6 text-3xl text-center;
+}
+
 svg {
   @apply min-w-[2rem] min-h-[2rem];
 }

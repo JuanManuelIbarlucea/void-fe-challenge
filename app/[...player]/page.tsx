@@ -3,7 +3,7 @@ import { MatchData, MatchPlayer } from "@/types/match";
 import Image from "next/image";
 import MatchHistory from "@/components/match-history";
 import React from "react";
-import fetchData from "@/lib/fetchData";
+import { getValorantData } from "@/lib/fetchData";
 
 export default async function PlayerPage({
   params,
@@ -11,7 +11,7 @@ export default async function PlayerPage({
   params: { player: string[] };
 }) {
   const [region, name, tag] = params.player;
-  const { data: matchHistory }: { data: MatchData[] } = await fetchData(
+  const { data: matchHistory }: { data: MatchData[] } = await getValorantData(
     `/valorant/v3/matches/${region}/${name}/${tag}`
   );
 
@@ -55,7 +55,7 @@ export default async function PlayerPage({
   const losses = matchHistory.length - wins;
   return (
     <div className="flex flex-col gap-5 min-w-[50rem] m-auto">
-      <h1 className="mb-6 text-3xl text-center">Match History</h1>
+      <h1 className="title">Match History</h1>
       <div className="h-[5rem] flex items-center gap-5">
         <Image
           alt={currentPlayer.character}

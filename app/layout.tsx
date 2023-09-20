@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="min-h-screen flex">
           <Nav />
-          <div className="min-h-screen max-w-5xl mx-auto my-10">
+          <div className="min-h-screen max-w-5xl mx-auto my-10 p-5">
             <RegionProvider>{children}</RegionProvider>
           </div>
         </div>

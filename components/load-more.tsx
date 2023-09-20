@@ -10,16 +10,12 @@ export default function LoadMore({ loadMore }: { loadMore: () => void }) {
   useEffect(() => {
     if (inView) {
       loadMore();
-      console.log("scrolled to the end");
     }
   }, [inView]);
 
   return (
     <>
-      <div
-        className="flex justify-center items-center p-4 bg-gray-800"
-        ref={ref}
-      >
+      <div className="flex justify-center items-center p-4  w-full" ref={ref}>
         <Spinner />
       </div>
     </>
