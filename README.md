@@ -1,4 +1,13 @@
+
 ## Getting Started
+
+Create a new .env file and load it the following variables: 
+
+```sh
+VALORANT_API=https://api.henrikdev.xyz
+POSTS_API=https://6396aee2a68e43e41808fa18.mockapi.io/api/posts
+```
+
 
 To run this example, simply do:
 
