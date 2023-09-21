@@ -14,9 +14,9 @@ export async function getValorantData(endpoint: string) {
   return res.json();
 }
 
-export async function getPosts(page: number = 1) {
+export async function getPosts(page: number = 1, author: string = "") {
   const res = await fetch(
-    `${process.env.POSTS_API}/posts?limit=5&page=${page}`,
+    `${process.env.POSTS_API}?limit=5&page=${page}&authorName=${author || ""}`,
     {
       cache: "no-cache",
     }
@@ -30,7 +30,7 @@ export async function getPosts(page: number = 1) {
 }
 
 export async function getPost(id: string) {
-  const res = await fetch(`${process.env.POSTS_API}/posts/${id}`, {
+  const res = await fetch(`${process.env.POSTS_API}/${id}`, {
     cache: "no-cache",
   });
 
