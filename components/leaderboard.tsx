@@ -77,25 +77,13 @@ export default function Leaderboard({ defaultLeaderboard }: LeaderboardProps) {
   return (
     <div className="overflow-y-auto max-h-screen scrollbar-thin scrollbar-thumb-indigo-500 scrollbar-track-slate-700 min-w-[50rem]">
       <div className="bg-gray-700 pt-5 pl-5 rounded-t-lg">
-        <div className="flex gap-4">
-          <select
-            value={currentSeason}
-            onChange={(ev) => setCurrentSeason(ev.target.value as SeasonType)}
-          >
-            {seasons.map((season) => (
-              <option key={season} value={season}>
-                {season.toUpperCase()}
-              </option>
-            ))}
-          </select>
-          <select value={region} onChange={changeRegion}>
-            {regions.map((region) => (
-              <option key={region} value={region}>
-                {region.toUpperCase()}
-              </option>
-            ))}
-          </select>
-        </div>
+        <select value={region} onChange={changeRegion}>
+          {regions.map((region) => (
+            <option key={region} value={region}>
+              {region.toUpperCase()}
+            </option>
+          ))}
+        </select>
       </div>
       <table>
         <thead>
