@@ -1,17 +1,15 @@
 "use client";
+
+import Image from "next/image";
 import { PostType } from "@/types/post";
 import React from "react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export default function Post({ post }: { post: PostType }) {
   const router = useRouter();
 
   return (
-    <div
-      key={post.id}
-      className="flex gap-5 w-full bg-indigo-900 p-4 border-2 border-white rounded-lg relative"
-    >
+    <div className="flex gap-5 w-full bg-indigo-900 p-4 border-2 border-white rounded-lg relative">
       <Image
         className="rounded-lg  cursor-pointer"
         alt={post.postText}
